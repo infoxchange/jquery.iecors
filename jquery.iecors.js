@@ -25,9 +25,8 @@
           };
 
           // Apply custom fields if provided
-          if ( s.xhrFields ) {
-            xhr.onerror = s.xhrFields.error;
-            xhr.ontimeout = s.xhrFields.timeout;
+          if ( s.xdrFields ) {
+            $.extend(xdr, s.xdrFields);
           }
 
           xdr.open( s.type, s.url );
